@@ -78,20 +78,9 @@ var getDictionary = function(callback) {
 	var dictObj;
 	var set = { "vbSet" : $('#vb-set').html().replace(/\s/g, '_').toLowerCase() , "gamemodeSet" : $('#gamemode-set').html(), "difficultySet" : $('#difficulty-set').html()};
 	var urlReq = "https://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
-	$.ajax({
-  		url: urlReq,
-  		crossDomain: true,
-  		dataType: "jsonp",
-  		success: function(data){
-  			dictObj = data;
-  		}
-		}).done(function() {
-		  	gameloopController.create(dictObj);
-			console.log(game);
-			timer.tik();
-	})
-
-/*
+	if (location.protocol != 'https:') {
+		urlReq = "http://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
+	}
 	$.getJSON(url , function( data ) {
 		dictObj = data;
 	}).done(function() {
@@ -101,7 +90,7 @@ var getDictionary = function(callback) {
 		console.log(game);
 		timer.tik();
 	}) 
-	*/			
+			
 	
 };
 
