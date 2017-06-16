@@ -80,7 +80,10 @@ var getDictionary = function(callback) {
 	var urlReq = "https://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
 	$.ajax({
   		url: urlReq,
-  		crossDomain: true
+  		crossDomain: true,
+  		success: function(data){
+  			dictObj = data;
+  		}
 		}).done(function() {
 		  	gameloopController.create(dictObj);
 			console.log(game);
