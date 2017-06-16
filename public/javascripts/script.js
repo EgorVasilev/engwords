@@ -81,6 +81,7 @@ var getDictionary = function(callback) {
 	$.ajax({
   		url: urlReq,
   		crossDomain: true,
+  		dataType: "jsonp",
   		success: function(data){
   			dictObj = data;
   		}
