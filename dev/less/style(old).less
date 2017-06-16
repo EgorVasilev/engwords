@@ -1,0 +1,154 @@
+@light-gray: rgb(242,242,242);
+@btn-clr-orange: rgb(242,89,19);
+@btn-clr-green:rgb(50,169,168);
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/bg_main_min.jpg);
+  background-size: cover;
+  display: flex;
+}
+
+a {
+  color: #00B7FF;
+}
+.tips {
+	font-size: 10px;
+}
+
+
+// -- app display hea -- //
+
+.app-display {
+	width: 60%;
+	height: 500px;
+	margin: auto;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 1px 1px 7px #777;
+}
+.app-display-head {
+	border-top-right-radius: 12px;
+	border-top-left-radius: 12px;
+	height: 20%;
+	background-color: @light-gray;
+	display: flex;
+	justify-content: space-around;
+
+}
+.app-display-head > h1 {
+	margin-top: 35px;
+}
+.registration {
+	height: 100%;
+	display: flex;
+	float: right;
+	justify-content: center;
+	flex-direction: column;
+}
+.registration > span {
+	text-align: center;
+
+}
+.reg-buttons > button {
+	margin:7px 20px 0px 0px;
+	padding: 10px;
+}
+#reg-button {
+	background-color: @btn-clr-green;
+	border: 1px solid gray;
+	border-radius: 4px;
+	color: white;
+
+}
+
+// -- app display discr -- //
+
+.app-display-discr {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	height: 60%;
+	padding: 40px;
+	font-size: 18px;
+	text-align: justify;
+	letter-spacing: 1px;
+	line-height: 30px;
+	overflow: auto;
+
+}
+
+// -- app display options -- //
+
+.app-display-options {
+	height: 20%;
+	display: flex;
+	background-color: @light-gray;
+	justify-content: space-around;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+
+}
+.options-values {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 70%;
+}
+.word-list, .difficulty, .game-mode {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#game-mode-button, #difficulty-button {
+	margin-right: 20px;
+	width: 8em;
+}
+
+.options-startbutton {
+	display: flex;
+	width: 40%;
+	justify-content: center;
+	align-items: center;
+}
+.options-startbutton > button {
+	text-transform: uppercase;
+	background-color: @btn-clr-orange;
+	width: 150px;
+	height: 40px;
+	border: 1px solid gray;
+	border-radius: 4px;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 599px) {
+	body {
+		padding: 0px;
+		background-color: white;
+	}
+	.app-display {
+		width: 100%;
+	}
+	.app-display-head > img {
+		display: none;
+	}
+	#word-list-button {
+		width: 8em;
+	}
+	.app-display-options {
+		flex-direction: column-reverse;
+		flex-wrap: wrap-reverse;
+	}
+}

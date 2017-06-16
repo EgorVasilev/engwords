@@ -1,0 +1,18 @@
+{
+	"noun" : {
+		"orange" : "A large round juicy citrus fruit with a tough bright reddish-yellow rind",
+		"lemon" : "A pale yellow oval citrus fruit with thick skin and fragrant, acidic juice",
+		"sofa" : "long upholstered seat with a back and arms, for two or more people",
+		"table" : "piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working at",
+		"ring" : "small circular band, typically of precious metal and often set with one or more gemstones, worn on a finger as an ornament or a token of marriage, engagement, or authority"
+			},
+	"verb" : {
+		"run" : "Move at a speed faster than a walk, never having both or all the feet on the ground at the same time",
+		"sing" : "Make musical sounds with the voice, especially words with a set tune",
+		"swim" : "Propel the body through water by using the limbs, or (in the case of a fish or other aquatic animal) by using fins, tail, or other bodily movement",
+		"dance" : "Move rhythmically to music, typically following a set sequence of steps",
+		"murder" : "Kill (someone) unlawfully and with premeditation"
+	}
+
+
+}

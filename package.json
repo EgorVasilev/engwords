@@ -16,5 +16,17 @@
     "mongoose": "^4.9.4",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": "6.10.0",
+    "npm": "3.10.10"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0"
   }
 }

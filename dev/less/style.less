@@ -1,0 +1,178 @@
+@light-gray: rgb(242,242,242);
+@btn-clr-orange: rgb(242,89,19);
+@btn-clr-green:rgb(50,169,168);
+
+// custom classes //
+body {
+
+	overflow-x:hidden;
+}
+
+
+.app-display {
+	background-color: transparent;
+	max-width: 600px;
+	transition: max-width 600ms linear;
+
+}
+.app-display > div {
+	padding: 0px;
+}
+.container {
+	
+	max-width: 100%;
+}
+.header {
+	background-color: red;
+}
+.tips {
+	margin-bottom: 0px;
+	font-size: 12px;
+}
+
+// -- main display -- //
+
+.header {
+	position: relative;
+	width: 100%;
+	background-color: @light-gray;
+	padding: 15px 0px 30px 0px;
+
+}
+
+#login {
+	margin: 0px 15px 0px 15px;
+}
+.registration {
+
+}
+
+// -- active game header --//
+
+.header-active {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	width: 100%;
+	min-height: 60px;
+	visibility: hidden;
+	background-color: @light-gray;
+	opacity: 0;
+	transition: opacity 600ms linear;
+}
+#stop {
+	margin-top: 17px;
+
+}
+
+#current-vb {
+	font-size: 24px;
+	
+}
+.timer {
+	font-size: 32px;
+	margin-top: 17px;
+}
+
+
+// -- discription -- //
+.discr {
+	max-height: 200px;
+	overflow-y: scroll;
+	background-color: #fff;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	padding: 25px 20px 25px 20px;
+}
+
+
+// -- main activity --//
+.progress-bar, .progress {
+	height: 7px;
+}
+.main-active {
+	margin-top: 45px;
+	max-width: 100%;
+	background-color: @light-gray;
+	height: 400px;
+	display: none;
+}
+.main-active-top {
+	height: 80%;
+}
+.answer-area > input, span > button {
+	height: 50px;
+}
+.answer-tips {
+	.tips;
+	margin-right: 20px;
+}
+#word-discr {
+	font-size: 16px;
+	line-height: 28px;
+}
+#score-counter {
+	background-color: #fff;
+	height: 40px;
+}
+#answer {
+	font-size: 16px;
+	 
+}
+
+// -- options -- //
+
+.dropdown-text {
+	margin-right: 7px;
+}
+.options {
+
+
+	background-color: @light-gray;
+	padding: 15px 0px 30px 0px;
+}
+.dropdown-menu > li {
+	margin: 4px 0px 4px 0px;
+	font-size: 18px;
+	padding-left: 10px;
+}
+.dropdown-menu > li:hover {
+	cursor: pointer;
+	background-color: @light-gray;
+}
+.dropdown-toggle {
+	width: 65%;
+	margin-bottom: 15px;
+}
+
+
+
+// -- modals --//
+#reg-form, #login-form {
+	padding-left: 15%;
+}
+#reg-form > input {
+	width: 85%;
+	height: 32px;
+	margin-bottom: 8px;
+	padding-left: 5%
+}
+#login-form > input {
+	width: 85%;
+	height: 32px;
+	margin-bottom: 8px;
+	padding-left: 5%
+}
+@media screen and (min-width: 600px) {
+	body {
+		background-image: url('../images/bg_main_min.jpg');
+		background-size: cover;
+		padding: 30px 0px 30px 0px;
+	}
+	.dropdown-menu > li {
+		font-size: 16px;
+	}
+	.dropup {
+		display: block;
+	}
+}

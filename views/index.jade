@@ -1,5 +1,139 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	div.app-display.center-block
+		div.container
+			div.row
+				div.col-xs-12.col-sm-12.col-md-8-offset-2.col-lg-3-offset-3
+					
+					// Application Main Display
+					
+					div.header.container
+						div.row.header-main
+							div.logo.hidden-xs.hidden-sm.col-md-3
+							div.registration.text-center.col-xs-12.col-sm-12.col-md-6
+								p.tips.text-center Keep track of your progress
+								button#login.btn(data-toggle='modal', data-target='#login-modal') Log in
+								button#reg-button.btn.btn-success(data-toggle='modal', data-target='#reg-modal') Create account
+						div.row.header-active
+							div.current-vb.text-center.hidden-xs.hidden-sm.col-md-4
+								p.tips Now playing
+								p#current-vb Popular
+							div.timer.text-center.col-xs-6.col-sm-6.col-md-4
+								p#timer 01:30
+							div.quit-game.col-xs-6.col-sm-6.col-md-4
+								div#stop.btn.btn-danger quit game
+
+					div.discr.container
+						div.row
+							div.col-xs-12.col-sm-12.col-md-8-offset-2
+								p This  is a fast-paced word game that challenges your vocabulary, tests your typing skills and stimulates your mind.
+								p When the game begins you'll be given the definition of a word and the letter that it starts with. The timer will start counting down as soon as the game starts. The game will end when you run out of time or answer all of the words in the list.
+								p If you guess a word correctly, you'll earn points and add some extra time to the clock. If you can't think of the word, hit the  
+									strong skip button 
+									| to move on to the next word at the cost of a few points.
+								p Select a word list and a difficulty to get started!
+					div.container.main-active
+						div.row.main-active-top
+							div.col-xs-12.col-sm-12.col-md-8.col-md-push-4
+								div.input-group.answer-area
+									input#answer-input.form-control(type='text', placeholder='G')
+									span.input-group-btn
+										button.btn.btn-default#skip-btn(type='button') Skip
+								div.progress
+									div.progress-bar.progress-bar-success(role='progressbar', style='width:0%')
+
+							div.col-xs-12.col-sm-12.col-md-4.col-md-pull-8
+								p
+									span.answer-tips Noun
+									span 
+										strong Starts with 
+											span#first-letter G
+								p#word-discr Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+						div.row
+							div.col-xs-12.col-sm-12.col-md-8.col-md-offset-4.col-lg-8
+								p#answer.text-center _
+								p#score-counter.text-center 0	
+					div.options
+						form
+							div.container
+								div.row
+									div.options-values.col-xs-12.col-sm-12.col-md-6.text-center
+										p.tips.text-center Word list
+										div.dropup
+											button.btn.btn-default.dropdown-toggle.text-center#words-list(data-toggle="dropdown") 
+												span.dropdown-text#vb-set Popular words
+												span.caret
+											ul.dropdown-menu
+												li.dropdown-header Technical
+												li.words-list-li Buildery
+												li.words-list-li Electricity
+												li.words-list-li Computers
+												li.dropdown-header Classic
+												li.words-list-li Popular words
+												li.words-list-li Capitals
+												li.words-list-li Animals
+										p.tips Game mode
+										div.dropup
+											button.btn.btn-default.dropdown-toggle.text-center#game-mode(data-toggle="dropdown") 
+												span.dropdown-text#gamemode-set Training
+												span.caret
+											ul.dropdown-menu
+												li.game-mode-li Training
+												li.game-mode-li Challenge
+										p.tips Difficulty
+										div.dropup
+											button.btn.btn-default.dropdown-toggle.text-center#difficulty(data-toggle="dropdown") 
+												span.dropdown-text#difficulty-set Normal
+												span.caret
+											ul.dropdown-menu
+												li.difficulty-li Easy
+												li.difficulty-li Normal
+												li.difficulty-li Hard
+									div.options-startbutton.text-center.col-xs-12.col-sm-12.col-md-6
+
+
+										div#start.btn.btn-danger start game
+
+
+
+
+	div.modal.fade#reg-modal(role='dialog')
+		div.modal-gialog.modal-sm.center-block
+			// modal content //
+			div.modal-content
+				div.modal-header
+					button.close(type='button', data-dismiss='modal') &times
+					h3.modal-title Create your account
+				div.modal-body
+					form#reg-form
+						p.tips E-mail adress
+						input(type='email', placeholder='your e-mail adress' required)
+						p.tips Username
+						input(type='text', placeholder='your username' required)
+						p.tips Real name
+						input(type='text', placeholder='your real name (optional)')
+						p.tips Password
+						input(type='password', placeholder='your password' required)
+						p.tips Confirm password
+						input(type='password', placeholder='confirm your password' required)
+				div.modal-footer
+					input.btn.btn-warning(type='submit', form='reg-form' value = 'Sign Up')
+	div.modal.fade#login-modal(role='dialog')
+		div.modal-gialog.modal-sm.center-block
+			// modal content //
+			div.modal-content
+				div.modal-header
+					button.close(type='button', data-dismiss='modal') &times
+					h3.modal-title Log in
+				div.modal-body
+					form#login-form
+						p.tips E-mail adress
+						input(type='email', placeholder='your e-mail adress' required)
+						p.tips Password
+						input(type='password', placeholder='your password' required)
+				div.modal-footer
+					button.btn.btn-warning(type='button', data-dismiss='modal') log In
+				
+
+
