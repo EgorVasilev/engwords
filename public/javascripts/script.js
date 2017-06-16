@@ -77,9 +77,9 @@ $('#skip-btn').click( function() {
 var getDictionary = function(callback) {
 	var dictObj;
 	var set = { "vbSet" : $('#vb-set').html().replace(/\s/g, '_').toLowerCase() , "gamemodeSet" : $('#gamemode-set').html(), "difficultySet" : $('#difficulty-set').html()};
-	var urlReq = "https://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
+	var url = "https://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
 	if (location.protocol != 'https:') {
-		urlReq = "http://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
+		url = "http://engtrainer.herokuapp.com/api?dict=" + set.vbSet;
 	}
 	$.getJSON(url , function( data ) {
 		dictObj = data;
