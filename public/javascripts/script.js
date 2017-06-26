@@ -87,11 +87,8 @@ var getDictionary = function(callback) {
 		//callback(dictObj);
 		
 		gameloopController.create(dictObj);
-		console.log(game);
 		timer.tik();
-	}) 
-			
-	
+	}) 	
 };
 
 
